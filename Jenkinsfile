@@ -19,7 +19,7 @@ pipeline {
                 cd myapp
                 python3 -m venv venv
                 ls
-                source venv/bin/activate
+                . venv/bin/activate
                 pip install -r requirements.txt
                 '''
             }
