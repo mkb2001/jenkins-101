@@ -1,7 +1,7 @@
 pipeline {
     agent { 
         node {
-            label 'docker_agent_python'
+            label 'docker_agent_alpine'
             }
       }
     triggers {
@@ -12,6 +12,10 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
+                set -xe
+
+                # Switch to root user
+                su -c "apk update && apk add python3 && apk add py3-pip"
                 cd myapp
                 pip install -r requirements.txt
                 '''
