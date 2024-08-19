@@ -15,7 +15,7 @@ pipeline {
                 set -xe
 
                 # Switch to root user
-                su -c "apt update && apt add python3 && apt add py3-pip"
+                su -c "apt update && apt install python3 && apt install py3-pip"
                 cd myapp
                 pip install -r requirements.txt
                 '''
