@@ -18,6 +18,7 @@ pipeline {
                 su -c "apt-get update && apt-get install -y python3 python3-pip && apt install -y python3.11-venv"
                 cd myapp
                 python3 -m venv venv
+                ls
                 source venv/bin/activate
                 pip install -r requirements.txt
                 '''
