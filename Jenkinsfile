@@ -1,7 +1,7 @@
 pipeline {
     agent { 
         node {
-            label 'docker-agent-apline'
+            label 'docker_agent_apline'
             }
       }
     triggers {
