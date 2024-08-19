@@ -15,7 +15,7 @@ pipeline {
                 set -xe
 
                 # Switch to root user
-                su -c "apt-get update && apt-get install -y python3 python3-pip"
+                su -c "apt-get update && apt-get install -y python3 python3-pip && apt install python3.11-venv"
                 cd myapp
                 python3 -m venv venv
                 source venv/bin/activate
