@@ -12,10 +12,6 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                set -xe
-
-                # Switch to root user
-                su -c "apk update && apk add python3"
                 cd myapp
                 pip install -r requirements.txt
                 '''
